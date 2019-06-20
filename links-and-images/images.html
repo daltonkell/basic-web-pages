@@ -5,5 +5,60 @@
   </head>
   <body>
     <h1>Images</h1>
+    <p>Unlink all the HTML elements we've encountered this far, image content is defined <em>outside</em> of the web pages</br>
+       that render it. We refer to these external resources by using any of the above paths.</br>
+       </br>
+       Images are included in web pages with the &ltimg/&gt tag and it "src" (source) attribute, which points to the image</br>
+       you want to display. Notice how it's an "empty" element, like &lt/br&gt:</br>
+       </br>
+       &ltimg src="some-photo.png"/&gt</br>
+       </br>
+       We won't put this in our project just yet -- still need to discuss a few things first.</br>
+       </br>
+
+       Retina displays and mobile devices make it a little more complex to handle images than the old</br>
+       img tag. We'll leave these complexities till a later discussion.</br>
+    </p>
+
+    <h3>Image Formats</h3>
+    <p>There are four main image formats used on the web:</br>
+       <ul>
+         <li>.jpg: Handle large color palettes without bloating size; good for photos with</br>
+             lots of colors, gradients. They do <em>not</em>allow transparent pixels, so that's a bummer.</br>
+           <img src="images/mochi.jpg"/>   
+         </li>
+         <li>.gif: go-to option for simple animations; limited in terms of color palettes, so never use them</br>
+              for photos.</br>
+           <img src="images/mochi.gif"/>
+         </li>
+         <li>.png: great for stuff that isn't a photo and isn't animated (icons, technical diagrams, logos). Bigger than .jpg</br>
+           <img src="images/mochi.png"/>
+         </li>
+         <li>.svg: "scalable vector graphic"--scalable to any dimension without loss of quality. Phenomenal resource for responsive design.</br>
+           <img src="images/mochi.svg"/>
+         </li>
+
+    <h3>Image Dimesions</h3>
+    <p>By default, the img element uses the inherited dimensions of its image file. Our JPG, GIF, and PNG images are</br>
+       actually 150x150, while our SVG is only 75x75. We'll dicsuss this later, but pixel-based image formats need to be</br>
+       twice as big as you want them to appear on retina displays. To get our pixel-based images down to the intended</br>
+       size, we can use the "width" attribute of the img tag:</br>
+       </br>
+           <img src="images/mochi.jpg" width="75"/>
+       </br>
+           <img src="images/mochi.gif" width="75"/>
+       </br>
+           <img src="images/mochi.png" width="75"/>
+       </br>
+           <img src="images/mochi.svg" width="75"/>
+       </br>
+
+       Setting the "width" attribute sets an explicit dimension for the image. There is also a corresponding "height"</br>
+       attribute; setting only one will cause them to scale proportionately, but setting both will cause stretching.</br>
+       Dimension values are specified in pixels, and you should never include the unit./<br>
+       </br>
+       The "width" and "height" attributes are useful, but it's usually better pratice to set image dimensions in CSS</br>
+       so you can alter them with media queries. We'll get to that later.
+    </p>
   </body>
 </html>
