@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8"/>
     <title>Images</title>
   </head>
   <body>
@@ -59,6 +60,33 @@
        </br>
        The "width" and "height" attributes are useful, but it's usually better pratice to set image dimensions in CSS</br>
        so you can alter them with media queries. We'll get to that later.
+    </p>
+
+    <h3>Text Alternatives</h3>
+    <p>Adding "alt" attributes to images is a best practice; it provides a text alternative to the image</br>
+       being displayed. This has an impact on both search engines and users with text-only browsers.</br>
+       </br>
+       Here are the updated images using the "alt" attribute:</br>
+       </br>
+           <img src="images/mochi.jpg" width="75" alt="Mochi ball in a bubble"/>
+       </br>
+           <img src="images/mochi.gif" width="75" alt="Animated mochi"/>
+       </br>
+           <img src="images/mochi.png" width="75" alt="I really don't feel like typing anymore"/>
+       </br>
+           <img src="images/mochi.svg" width="75"/>
+       </br>
+    </p>
+
+    <h2>More HTML Attributes</h2>
+    <h3>Document Language</h3>
+    <ul>
+      <li>default language is defined by the "lang" attribute set at the top level &lthtml&gt element</li>
+      <li>Set ours as English, as it is written in English (should be set for all pages)</li>
+    </ul>
+    <h3>Character Sets</h3>
+    <p>Like UTF-8; specifies the encoding used (to be used?). Check out the "meta charset='UTF-8'" tag up top</br>
+       (should be set for every page)
     </p>
   </body>
 </html>
