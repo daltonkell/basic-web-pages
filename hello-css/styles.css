@@ -4,6 +4,6 @@ body element. After the selector comes the declarations block, and any propertie
 set inside here will affect the body element. */
 
 body {
-  color: #414141; /* dark grey */
-  background-color: #EEEEEE; /* light grey (gray?) */
+  color: #414141;            /* dark gray */
+  background-color: #EEEEEE; /* light gray */
 }
