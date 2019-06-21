@@ -1,0 +1,9 @@
+/* Creating a CSS rule. A rule always starts with a selector that defines
+which HTML element it applies to. In this case, we're trying to style the
+body element. After the selector comes the declarations block, and any properties
+set inside here will affect the body element. */
+
+body {
+  color: #414141; /* dark grey */
+  background-color: #EEEEEE; /* light grey (gray?) */
+}
