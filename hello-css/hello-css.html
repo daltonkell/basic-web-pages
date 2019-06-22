@@ -27,7 +27,7 @@
 
     <ul>
       <li>disc</li>
-      <li>circle</li>
+      <li>circle (pictured)</li>
       <li>square</li>
     </ul>
 
@@ -35,12 +35,26 @@
 
     <ol>
       <li>decimal</li>
-      <li>lower-roman</li>
+      <li>lower-roman (pictured)</li>
       <li>upper-roman</li>
       <li>lower-alpha</li>
       <li>upper-alpha</li>
       <li>(and many more!)</li>
     </ol>
+
+    <h2>The Cascade</h2>
+    <p>CSS is applied to pages in a prioroty heirarchy, from lowest priority to highest priority:
+      <ol>
+        <li>The browser’s default stylesheet</li>
+        <li>User-defined stylesheets</li>
+        <li>External stylesheets (that’s us)</li>
+        <li>Page-specific styles (that’s also us)</li>
+        <li>Inline styles (that could be us, but it never should be)</li>
+      </ol>
+    This means styles defined in subsequest steps <em>override</em> the previous ones. An example of this
+    can be found at <a href='dummy.html'>our dummy page</a>; check out the code and the rendering!
+    </p>
+
   </body>
 </html>
 

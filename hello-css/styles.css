@@ -3,7 +3,67 @@ which HTML element it applies to. In this case, we're trying to style the
 body element. After the selector comes the declarations block, and any properties
 set inside here will affect the body element. */
 
+/* ***Unit of Measurement*** 
+Many CSS properties will require a unit to be specified with the value. There are
+many properties, but two very common are "px" (pixels) and "em" (emphasis). Essentially,
+pixels provide the base size, and then using em will define a size relative to that base.*/
+
 body {
   color: #414141;            /* dark gray */
   background-color: #EEEEEE; /* light gray */
+  font-size: 18px;           /* base font size for everything in the body */
 }
+
+h1 {
+  font-size: 2em;            /* 2x size relative to parent */
+}
+
+h2 {
+  font-size: 1.6em;          /* 1.6x size relative to parent */
+}
+
+/* ***Selecting Multiple Elements***
+Sometimes, you want to set a property for multiple elements at once with the same value.
+Thankfully, you don't have to repeat the code--you can simply call each selector seperated
+by commas:*/
+
+h1, h2, h3, h4, h5, h6 {
+  /* Define the fonts for all of our headings in one rule. We can declare multiple font families,
+  as not all users may have the same access to fonts. We list in order of priority to load: first
+  try Helvetiva; if that fails, try Arial; fall back to sans-serif. */
+  font-family: "Heltvetica", "Arial", sans-serif;
+  font-weight: normal, /* not bold */
+}
+
+/* ***List Styles***
+The "list-style-type" property allows us to manipulate the type of list marker rendered. We
+typically define it for ul or ol elements. Of particular interest is the "none" value,
+which will do exactly as it's told -- render nothing, which will make the list elements
+look more like buttons. You can even include images as custom markers; see the MDN for this.*/
+
+ul {
+  list-style-type: circle;
+}
+
+ol {
+  list-style-type: lower-roman;
+}
+
+/* ***More Text Styling***
+There are a ton more examples of text styling to be had here. The following code snippets
+and comments will show just a bit of the CSS expanse.*/
+
+a {
+  /* By setting to none, we remove the underline to a link. Another common
+  value to set is "line-through", which would act as a strikethrough. However, it's better practice
+  to actually set the meaning of the strikethrough using the HTML and then set the styling of it
+  using CSS. */
+  text-decoration: none;
+}
+
+p {
+  /* Text alignment; as of right now, this will affect the entire page. We'll see later how we
+  can use CSS boxes to reign alignment in to specific sections. */
+  text-align: justify;
+}
+
