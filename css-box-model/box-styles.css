@@ -1,8 +1,5 @@
 /* Block Styling and Notes */
-
-/* Block boxes always appear below the previous block element. This is the
-“natural” or “static” flow of an HTML document when it gets rendered by a web browser.
-
+/* Block boxes always appear below the previous block element. This is the “natural” or “static” flow of an HTML document when it gets rendered by a web browser.  
 The width of block boxes is set automatically based on the width of its parent container.
 In this case, our blocks are always the width of the browser window.
 
@@ -87,8 +84,35 @@ p {
    - of course, once we get to the flexbox, that concept will make it way easier to deal
      with margins and such */
 
+strong {
+  margin: 50px; /* inline will only take horizontal margins */
+}
+
 p {
   padding: 20px 0 20px 10px;
   margin-top: 25px;
   margin-bottom: 50px; /* if you don't have an element separating your p elements, watch out for collapse */
+}
+
+div {
+  color: #FFF;
+  background-color: #5995DA;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid #5D6063;
+  border-radius: 5px;
+  width: 200px; /* explicit dimension, instead of taking on defualt dims from HTML */
+}
+
+/* Content Boxes and Border Boxes
+The width and height props only define the size of a box's content; its padding and boarder are added
+ON TOP of whatever explicit dimensions are set. This can be a little counterintuitive, and will require
+keeping track of a bunch more stuff. Thankfully, CSS has a property to automatically calculate the width
+of a box: box-sizing.
+  - default value is content-box, which leads to above behavior
+  - border-box will force the entire box to be the set dimensions, but now content is sized automatically */
+
+div {
+  box-sizing: border-box;
 }
