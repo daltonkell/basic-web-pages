@@ -1,3 +1,12 @@
+/* If you notice that small white band around the web-page, good catch--that's
+a default style rendered by the browser. For consistency, it's a good idea to override
+default styles by using the "universal" CSS selector , typically at the top. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Block Styling and Notes */
 /* Block boxes always appear below the previous block element. This is the “natural” or “static” flow of an HTML document when it gets rendered by a web browser.  
 The width of block boxes is set automatically based on the width of its parent container.
@@ -115,4 +124,14 @@ of a box: box-sizing.
 
 div {
   box-sizing: border-box;
+}
+
+/* Aligning Boxes
+  - text-align prop aligns the content and inline boxes inside of a block element
+  - can use floats and flexbox, but we'll get to more detail about them later
+  - when you set the left and right margins of a block element to auto,
+    it centers the parent element */
+
+div {
+  margin: 20px auto;
 }
