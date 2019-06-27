@@ -1,4 +1,41 @@
-.synopsis {
+/* Applying CSS to Select HTML Elements */
+
+.synopsis {              /* the dot distinguishes class selectors from type selectors */
   color: #7E8184;        /* Light gray */
   font-style: italic;
+}
+
+.button {
+  color: #FFF;
+  background-color: #5995DA;    /* Blue */
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid #5D6063;    /* Dark gray */
+  border-radius: 5px;
+
+  width: 200px;
+  margin: 20px auto;            /* Horizontal set to auto--centers the element */
+}
+
+.page {           /* Style the page class, so all of our content will get these props */
+  width: 600px;
+  margin: 0 auto;
+}
+
+/* Order Matters!
+   When styling elements with nested inheritance schemes, the order of our CSS
+   sets the properties. If we put the .button { ... } styling after the .call-to-action,
+   the .button rule would override the .call-to-action, just as the .call-to-action overrides
+   only a few properties in .button now. */
+
+.call-to-action { /* Style only the second button, where the classes are separated by a space */
+  font-style: italic;
+  background-color: #EEB75A;    /* Yellow */
+}
+
+/* Descendant selectors allow us to target elements inside of another element. For example, we
+   can pull out the <em> inside the .synopsis paragraph with the following: */
+.synopsis em {
+  font-style: normal; /* Display <em> in here as upright characters, differentiating from italics */
 }
