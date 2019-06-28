@@ -5,7 +5,9 @@
   font-style: italic;
 }
 
-.button {
+.button:link, .button:visited {
+  display: block;
+  text-decoration: none;
   color: #FFF;
   background-color: #5995DA;    /* Blue */
   font-weight: bold;
@@ -29,9 +31,13 @@
    the .button rule would override the .call-to-action, just as the .call-to-action overrides
    only a few properties in .button now. */
 
-.call-to-action { /* Style only the second button, where the classes are separated by a space */
+.call-to-action:link, .call-to-action:visited { /* Style only the second button, where the classes are separated by a space */
   font-style: italic;
   background-color: #EEB75A;    /* Yellow */
+}
+
+.call-to-action:hover, .call-to-action:visited:hover {
+  background-color: #F5CF8E; /* light yellow */
 }
 
 /* Descendant selectors allow us to target elements inside of another element. For example, we
