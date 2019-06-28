@@ -12,6 +12,8 @@ other elements they can flow around the element. */
 .page { /* align parent container */
   width: 900px;
   margin: 0 auto;
+  /* overflow: hidden;
+  background-color: #EAEDF0; */
 }
 
 .menu {
@@ -27,11 +29,28 @@ other elements they can flow around the element. */
 }
 
 .content {
+  float: left;                  /* floating multiple objects in same direction makes them "stick" horizontally */
   height: 500px;
+  width: 650px;
   background-color: #F5CF8E;    /* Yellow */
 }
 
 .footer {
+  clear: both;                  /* clears the float, which ignores the other floats before it */
   height: 200px;
   background-color: #D6E9FE;    /* Light blue */
+}
+
+/* When clearing floats, you usually want to clear both left and right. However, you can choose to
+clear only the "left" or "right" values as well. Clearing floats only fixes the height issue when there's an element
+inside the container element that we can add a clear property to. Now that our footer is outside .page,
+we need to make floated elements contribute to the height of the container. Enter hiding the overflow.
+
+By adding an overflow: hidden declaration to a container div, we're telling it to recognize the height of
+any floated elements it contains. This is how we can add a background color to our .page element
+and actually have it render. */
+
+.container {
+  overflow: hidden;
+  background-color: #EAEDF0;
 }
