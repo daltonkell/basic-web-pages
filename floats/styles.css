@@ -1,0 +1,37 @@
+/* override default margins, padding, sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Floats give us control over horizontal positioning of elements. By floating something
+in one direction, it doesn't only tell the browser to move it that way--it also tells the
+other elements they can flow around the element. */
+
+.page { /* align parent container */
+  width: 900px;
+  margin: 0 auto;
+}
+
+.menu {
+  height: 100px;
+  background-color: #B2D6FF;    /* Medium blue */
+}
+
+.sidebar {
+  float: left;
+  height: 300px;
+  width: 200px;                 /* restrict width */
+  background-color: #F09A9D;    /* Red */
+}
+
+.content {
+  height: 500px;
+  background-color: #F5CF8E;    /* Yellow */
+}
+
+.footer {
+  height: 200px;
+  background-color: #D6E9FE;    /* Light blue */
+}
